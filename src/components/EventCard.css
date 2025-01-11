@@ -1,0 +1,131 @@
+.event-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .event-card.flipped .card {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .card-front {
+    background-color: black; /* Changed from white to black */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content-container {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .content-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ff6f61; /* Changed from #333 to #ff6f61 */
+    margin-bottom: 10px;
+  }
+  
+  .content-container p {
+    font-size: 1.1rem;
+    color: #fff; /* Changed from #777 to white for better contrast on black */
+    margin: 5px 0;
+  }
+  
+  .card-back {
+    background-color: black; /* Changed from #f9f9f9 to black */
+    transform: rotateY(180deg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-back h3 {
+    font-size: 1.5rem;
+    color: #ff6f61; /* Changed from #333 to #ff6f61 */
+    margin-bottom: 15px;
+  }
+  
+  .card-back p {
+    font-size: 1.1rem;
+    color: #fff; /* Changed from #666 to white for better contrast */
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+  
+  .card-back button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .card-back button:hover {
+    background-color: #e14b3a;
+  }
+  
+  @media (max-width: 768px) {
+    .event-card {
+      width: 280px;
+      height: 380px;
+    }
+    .content-container h3 {
+      font-size: 1.3rem;
+    }
+    .content-container p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .event-card {
+      width: 240px;
+      height: 340px;
+    }
+    .content-container h3 {
+      font-size: 1.2rem;
+    }
+    .card-back button {
+      font-size: 1rem;
+      padding: 10px 16px;
+    }
+  }

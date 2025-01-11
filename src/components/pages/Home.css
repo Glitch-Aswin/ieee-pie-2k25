@@ -1,0 +1,110 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    animation: fadeIn 2s ease-in-out;
+    padding-right: 20px; /* To provide space between text and image */
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.register-btn {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+    background-color: #ff4c3b;
+    transform: scale(1.05);
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query for Tablets and Smaller Devices */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack the content and image */
+        height: auto; /* Let height adjust with content */
+        padding: 15px;
+    }
+
+    .hero-content {
+        max-width: 100%; /* Allow the content to take full width */
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem; /* Smaller font size for titles */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Slightly smaller paragraph text */
+    }
+
+    .hero-image {
+        max-width: 100%; /* Allow the image to take full width */
+    }
+
+    .register-btn {
+        width: 100%; /* Make the button full width for mobile */
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Even smaller title for small screens */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Smaller text for better readability */
+    }
+
+    .register-btn {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+}

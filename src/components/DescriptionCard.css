@@ -1,0 +1,85 @@
+.description-card {
+    background: #111; /* Dark background for better contrast */
+    border-radius: 12px; /* Slightly larger radius for smooth corners */
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 900px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.description-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #fd5a07, #ffb648); /* Gradient border */
+    padding: 3px;
+}
+
+.description-card-title {
+    font-size: 2rem; /* Increased size for prominence */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fd5a07;
+    letter-spacing: 2px;
+}
+
+.description-card-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Slightly modernized font */
+}
+
+.description-card-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Media Query for Tablets and Smaller Devices */
+@media (max-width: 768px) {
+    .description-card {
+        padding: 15px;
+        margin: 15px;
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .description-card-title {
+        font-size: 1.6rem; /* Smaller title font */
+        margin-bottom: 15px;
+    }
+
+    .description-card-text {
+        font-size: 1rem; /* Smaller text for readability on smaller screens */
+        line-height: 1.6;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .description-card {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .description-card-title {
+        font-size: 1.4rem; /* Even smaller title for small screens */
+        margin-bottom: 12px;
+    }
+
+    .description-card-text {
+        font-size: 0.95rem; /* Adjusted text size for mobile devices */
+        line-height: 1.5;
+    }
+}
