@@ -3,6 +3,7 @@
     padding: 60px 20px;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: white;
+    margin-top: 100px; /* Added to prevent overlap with Home section */
   }
   
   .events-header {

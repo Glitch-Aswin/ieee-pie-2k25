@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     padding: 20px;
+    padding-bottom: 80px; /* Added extra bottom padding for separation */
     background-size: cover;
     background-position: center;
     color: white;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-bottom: 0; /* Remove margin-bottom, handled by padding */
 }
 
 .hero-content {
